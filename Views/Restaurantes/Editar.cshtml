@@ -1,0 +1,35 @@
+﻿@model Restaurante
+
+<h2>Editar Restaurante</h2>
+
+<form asp-action="Guardar" method="post">
+    <div class="form-group">
+        <label for="Nombre">Nombre</label>
+        <input type="text" class="form-control" id="Nombre" name="Nombre" value="@Model.Nombre" required />
+    </div>
+
+    <div class="form-group">
+        <label for="FormattedAddress">Dirección</label>
+        <input type="text" class="form-control" id="FormattedAddress" name="FormattedAddress" value="@Model.FormattedAddress" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Foto">Foto URL</label>
+        <input type="text" class="form-control" id="Foto" name="Foto" value="@Model.Foto" />
+    </div>
+
+    <div class="form-group">
+        <label for="Rating">Rating</label>
+        <input type="number" class="form-control" id="Rating" name="Rating" value="@Model.Rating" min="0" max="10" />
+    </div>
+
+    <div class="form-group">
+        <label for="Activo">Activo</label>
+        <select class="form-control" id="Activo" name="Activo">
+            <option value="true">ACTIVO</option>
+            <option value="false">INACTIVO</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+</form>

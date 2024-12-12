@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Examen_PROAGRO.Models.Restaurante>
+@{
+    ViewData["Title"] = "Restaurantes";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Restaurante</th>
+            <th>Dirección</th>
+            <th>Foto</th>
+            <th>Rating</th>
+            <th>Nota Visita</th>
+            <th>Fecha de Registro</th>
+            <th>Activo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var restaurante in Model)
+        {
+            <tr>
+                <td>@restaurante.Nombre</td>
+                <td>@restaurante.FormattedAddress</td>
+                <td><img src="@restaurante.Foto" alt="Foto de @restaurante.Nombre" width="100" /></td>
+                <td>@restaurante.Rating</td>
+                <td>Etapa 2</td>
+                <td>@restaurante.FechaRegistro</td>
+                <td>
+                    @(restaurante.Activo.HasValue ? (restaurante.Activo.Value ? "ACTIVO" : "INACTIVO") : "DESCONOCIDO")
+                </td>
+                <td>
+                    <div>
+                    <button class="btn btn-primary" onclick="editRegistro(@restaurante.FsqId)">Editar</button>
+                    </div>
+                    -
+                    <div>
+                        <button class="btn btn-danger" onclick="editRegistro(@restaurante.FsqId)">Baja</button>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@section Scripts {
+
+}

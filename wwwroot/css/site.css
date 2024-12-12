@@ -1,0 +1,469 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.explorer {
+    position: relative;
+}
+
+.explorer-map {
+    width: 100%;
+    height: 500px;
+    background-color: #F8F8F8;
+}
+
+.explorer--text {
+    font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #171417;
+}
+
+.explorer--secondary-text {
+    color: #959B9E;
+    font-size: 14px;
+}
+
+.explorer--bold {
+    font-weight: 500;
+}
+
+.explorer--background-icon {
+    background-size: 16px !important;
+    background-position-x: 16px !important;
+    background-position-y: 50% !important;
+    background-repeat: no-repeat !important;
+}
+
+@media only screen and (min-width: 640px) {
+    #explorer-search {
+        width: 400px !important;
+    }
+}
+
+#explorer-search {
+    box-sizing: border-box;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    padding: 8px 16px;
+    padding-left: 48px;
+    width: 85%;
+    height: 40px;
+    background-color: #FFFFFF;
+    border: 1px solid #E0DDDE;
+    border-radius: 4px;
+    background-image: url('https://files.readme.io/1bc7c8b-searchIcon.svg');
+}
+
+    #explorer-search:hover,
+    #explorer-search:focus {
+        outline: none;
+        border-color: #3333FF;
+    }
+
+#explorer-dropdown {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 24px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    border: 1px solid #F4F4F4;
+    width: 400px;
+    z-index: 1;
+}
+
+#explorer-suggestions {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.explorer--dropdown-item:hover {
+    background-color: #F1F1F1;
+}
+
+.explorer--dropdown-item {
+    padding: 16px;
+    background: #FFFFFF;
+    box-shadow: inset 0px -1px 0px #F4F4F4;
+}
+
+    .explorer--dropdown-item div {
+        pointer-events: none;
+    }
+
+.explorer--copyright {
+    background: #FAF8F8;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.explorer--error {
+    padding: 8px 16px;
+    padding-left: 48px;
+    background: #FCEDEC;
+    color: #980500;
+    border: 1px solid rgba(152, 5, 0, 0.3);
+    border-radius: 4px;
+    margin: 8px;
+    background-image: url('https://files.readme.io/62b6781-errorIcon.svg');
+}
+
+.mapboxgl-popup {
+    max-width: 290px !important;
+}
+
+.mapboxgl-popup-content {
+    padding: 0;
+    filter: drop-shadow(0 0 8px rgb(23 20 23 / 10%));
+    border-radius: 4px;
+    min-width: 290px;
+    min-height: 88px;
+}
+
+.explorer--popup {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+}
+
+.explorer--popup-image {
+    width: 56px;
+    height: 56px;
+    margin: 0 !important;
+}
+
+.explorer--popup-description {
+    margin: 0 8px;
+    /* max-width: 160px; */
+}
+
+.explorer--popup-rating {
+    background: #389E45;
+    border-radius: 4px;
+    height: 24px;
+    min-width: 26px;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-left: auto;
+}
+
+.venue {
+    position: relative;
+}
+
+.venue--map {
+    width: 100%;
+    height: 500px;
+    background-color: #f8f8f8;
+}
+
+.venue--details-outer {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px;
+    background-color: #f8f8f8;
+}
+
+.venue--details {
+    width: 100%;
+    padding: 16px 16px 0px 16px;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+    .venue--details p {
+        margin: 0 0 16px 0;
+    }
+
+    .venue--details span {
+        color: #757575;
+    }
+
+    .venue--details div > div {
+        margin-bottom: 8px;
+    }
+
+.venue--schedule {
+    margin-top: 16px;
+}
+
+    .venue--schedule div > div {
+        margin: 0px;
+    }
+
+.venue--hours {
+    display: flex;
+    justify-content: space-between;
+}
+
+.venue--related-place,
+.venue--tip {
+    margin-bottom: 24px !important;
+}
+
+.venue--directory {
+    margin-bottom: 32px !important;
+}
+
+    .venue--directory p {
+        margin: 8px 0;
+    }
+
+.venue--text {
+    font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #171417;
+}
+
+.venue--text-regular {
+    color: #171417 !important;
+}
+
+.venue--secondary-text {
+    color: #959b9e;
+    font-size: 14px;
+}
+
+.venue--rating-text {
+    color: #389e45;
+}
+
+.venue--closed-text {
+    color: #de1912;
+}
+
+.venue--background-icon {
+    background-size: 16px !important;
+    background-position-x: 16px !important;
+    background-position-y: 50% !important;
+    background-repeat: no-repeat !important;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 16px 0;
+}
+
+.mapboxgl-ctrl-top-right {
+    left: 24px;
+    top: 80px;
+    right: unset;
+    z-index: 0;
+}
+
+@media only screen and (min-width: 600px) {
+
+    /* For Tablet: */
+    .mapboxgl-ctrl-top-right {
+        left: unset;
+        top: 0;
+        right: 0;
+        z-index: 2;
+    }
+}
+
+@media only screen and (min-width: 968px) {
+
+    /* For Desktop: */
+    #venue-dropdown,
+    #venue-search {
+        width: 392px !important;
+    }
+
+    .venue--map {
+        min-width: 400px;
+    }
+
+    .venue--details-outer {
+        min-width: 400px;
+        padding: 24px;
+    }
+
+    .venue--map-details-wrapper {
+        display: flex;
+        height: 500px;
+    }
+}
+
+#venue-search {
+    box-sizing: border-box;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    padding: 8px 16px;
+    padding-left: 48px;
+    width: 85%;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #e0ddde;
+    border-radius: 4px;
+    background-image: url('https://files.readme.io/1bc7c8b-searchIcon.svg');
+}
+
+    #venue-search:hover,
+    #venue-search:focus {
+        outline: none;
+        border-color: #3333ff;
+    }
+
+#venue-dropdown {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 24px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #f4f4f4;
+    width: 85%;
+    z-index: 1;
+}
+
+#venue-suggestions {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+#flex-container {
+    display: flex;
+}
+
+.venue--dropdown-item:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.venue--dropdown-item {
+    padding: 16px;
+    background: #ffffff;
+    box-shadow: inset 0px -1px 0px #f4f4f4;
+}
+
+    .venue--dropdown-item div {
+        pointer-events: none;
+    }
+
+.venue--copyright {
+    background: #faf8f8;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.venue--error {
+    padding: 8px 16px;
+    padding-left: 48px;
+    background: #fcedec;
+    color: #980500;
+    border: 1px solid rgba(152, 5, 0, 0.3);
+    border-radius: 4px;
+    margin: 8px;
+    background-image: url('https://files.readme.io/62b6781-errorIcon.svg');
+}
+
+.venue--icon {
+    display: flex;
+}
+
+    .venue--icon img {
+        margin-left: 10px;
+    }
+
+.venue--photos {
+    display: flex;
+    overflow-x: auto;
+}
+
+    .venue--photos img {
+        margin-right: 8px;
+    }
+
+.venue--categories,
+.venue--features,
+.venue--tips,
+.venue--related-places,
+.venue--directories {
+    margin: 16px 0;
+}
+
+    .venue--categories,
+    .venue--features p {
+        margin: 8px 0;
+    }
+
+.venue--end {
+    margin-bottom: 16px;
+}
+
+/* Estilos del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close-btn:hover,
+    .close-btn:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }

@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Consumir ENDPOINT</h1>
+
+    <button id="btnGetPlaces" class="btn btn-primary">Obtener Lugares</button>
+    
+    <div id="placesResults" style="margin-top: 20px;">
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btnGetPlaces').click(function () {
+                $.ajax({
+                    url: '@Url.Action("GetPlaces", "Home")',
+                    type: 'GET',
+                    success: function (data) {
+                        if (data && data.length > 0) {
+                            var resultsHtml = "<ul>";
+                            data.forEach(function (place) {
+                                console.log(place);
+                                resultsHtml += "<li>" + place.name + " - " + place.location.address + "</li>";
+                                resultsHtml += "<li>" + place.geocodes.main.latitude + " - " + place.geocodes.main.longitude + "</li>";
+                            });
+                            resultsHtml += "</ul>";
+                            $('#placesResults').html(resultsHtml);
+                        } else {
+                            $('#placesResults').html("<p>No se encontraron lugares.</p>");
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        $('#placesResults').html("<p>Hubo un error al obtener los lugares.</p>");
+                    }
+                });
+            });
+        });
+    </script>
+}
